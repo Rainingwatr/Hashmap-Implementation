@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+#include <unordered_map>
+
+int main() {
+    std::unordered_map<std::string, int> ages;
+    ages["Alice"] = 30;
+    ages["Bob"] = 25;
+    ages["Charlie"] = 35;
+    std::cout << "Alice's age: " << ages["Alice"] << std::endl;
+    if (ages.count("David")) {
+        std::cout << "David's age: " << ages["David"] << std::endl;
+    } else {
+        std::cout << "David not found." << std::endl;
+    }
+
+    for (const auto& pair : ages) {
+        std::cout << pair.first << ": " << pair.second << std::endl;
+    }
+    ages.erase("Bob");
+
+    return 0;
+}#include <iostream>
+#include <string>
+#include <unordered_map>
+
+int main() {
+    std::unordered_map<std::string, int> ages;
+    ages["Alice"] = 30;
+    ages["Bob"] = 25;
+    ages["Charlie"] = 35;
+    std::cout << "Alice's age: " << ages["Alice"] << std::endl;
+
+    if (ages.count("David")) {
+        std::cout << "David's age: " << ages["David"] << std::endl;
+    } else {
+        std::cout << "David not found." << std::endl;
+    }
+
+    for (const auto& pair : ages) {
+        std::cout << pair.first << ": " << pair.second << std::endl;
+    }
+
+    ages.erase("Bob");
+
+    return 0;
+}
